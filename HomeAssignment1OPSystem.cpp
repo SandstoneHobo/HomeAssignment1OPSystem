@@ -13,7 +13,9 @@ void generateMenu(){
 }
 
 void listDirectory() {
-    std::cout << "PlaceHolder";
+    std::cout << std::endl;
+    system("dir");
+    std::cout << std::endl;
 }
 
 int main()
@@ -32,5 +34,6 @@ int main()
                 break;
         }
     }
+    return 0;
 }
 
