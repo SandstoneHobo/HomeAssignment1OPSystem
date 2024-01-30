@@ -18,6 +18,12 @@ void listDirectory() {
     std::cout << std::endl;
 }
 
+void printDirectory() {
+    std::cout << std::endl;
+    system("cd");
+    std::cout << std::endl;
+}
+
 int main()
 {
     char input = '0';
@@ -28,6 +34,9 @@ int main()
         switch (input) {
             case '1':
                 listDirectory();
+                break;
+            case '2':
+                printDirectory();
                 break;
             default:
                 std::cout << "You gave an invalid input";
