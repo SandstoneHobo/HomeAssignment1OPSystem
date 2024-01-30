@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <string>
 
 void generateMenu(){
     std::cout << std::endl;
@@ -24,6 +25,18 @@ void printDirectory() {
     std::cout << std::endl;
 }
 
+void createDirectory(){
+    std::string file_name;
+    std::cout << std::endl << "What do you want to name the new directory?: ";
+    std::cin >> file_name;
+    std::cout << std::endl;
+    std::string cmd = "mkdir ";
+    cmd += file_name;
+    system(cmd.data());
+    std::cout << std::endl;
+
+}
+
 int main()
 {
     char input = '0';
@@ -37,6 +50,9 @@ int main()
                 break;
             case '2':
                 printDirectory();
+                break;
+            case '3':
+                createDirectory();
                 break;
             default:
                 std::cout << "You gave an invalid input";
