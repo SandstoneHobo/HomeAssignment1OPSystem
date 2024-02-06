@@ -126,12 +126,17 @@ void displayFile() {
 
 int main()
 {
+    //creates a variable for the users menu input
     char input = '0';
+    //loops until the user inputs 6 which is the exit option
     while (input != '6') {
-        bool valid = false;
+        //variable for which mode the user will choose for option 5
         char mode = '0';
+        
+        //calls the function to make the menu and gets a user input for the option selected
         generateMenu();
         std::cin >> input;
+        //switch case maps the user input to a function for that option
         switch (input) {
             case '1':
                 listDirectory();
@@ -146,9 +151,11 @@ int main()
                 displayMessage();
                 break;
             case '5':
+                //loops until the user inputs one of the valid modes
                 while (mode != 'd' && mode != 'c' && mode != 'q') {
                     std::cout << std::endl << "Do you want to display a file (d) or concatenate a file(c)? (q to quit): ";
                     std::cin >> mode;
+                    //switch case picks which function to call based on the selected mode
                     switch (mode) {
                         case 'd':
                             displayFile();
