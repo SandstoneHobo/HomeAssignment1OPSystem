@@ -2,6 +2,8 @@
 
 This application runs basic shell commands in a windows operating system
 
+To use the program you need to run HomeAssignment1OPSystem.exe file in the repository
+
 The menu is displayed as such
 
 1. List directory contents
